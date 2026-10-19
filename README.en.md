@@ -52,7 +52,7 @@ Requires a client supporting remote HTTP, OAuth, and MCP protocol `2026-07-28`.
 Add this remote server in your client, then sign in and approve read-only access. No API key is needed:
 
 ```text
-https://douchanchan.toolspace.xyz/mcp
+https://douchanchan.app/mcp
 ```
 
 | Tool | Purpose | Required plan |

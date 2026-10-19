@@ -52,7 +52,7 @@ npx skills add vzt7/douchanchan-skills --skill douchanchan -g
 在客户端添加远程服务，按提示登录并授予只读权限，无需 API Key：
 
 ```text
-https://douchanchan.toolspace.xyz/mcp
+https://douchanchan.app/mcp
 ```
 
 | 工具 | 用途 | 权益要求 |

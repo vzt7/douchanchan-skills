@@ -1,6 +1,6 @@
 # Analysis and reports
 
-Open [analysis tasks](https://douchanchan.toolspace.xyz/analysis-tasks). Sign in through the avatar menu.
+Open [analysis tasks](https://douchanchan.app/analysis-tasks). Sign in through the avatar menu.
 
 ## Submit analysis
 

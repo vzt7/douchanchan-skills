@@ -1,8 +1,8 @@
 # MCP account reads
 
-Prefer connected MCP for the current user's coin balance, analysis tasks and reports unless the user chose the website. When MCP is not connected and browser tools are available, use the website's account menu or [analysis tasks](https://douchanchan.toolspace.xyz/analysis-tasks). If the user specifically requested MCP, explain the connection step instead of switching routes. MCP does not read the browser extension's creator-post cache.
+Prefer connected MCP for the current user's coin balance, analysis tasks and reports unless the user chose the website. When MCP is not connected and browser tools are available, use the website's account menu or [analysis tasks](https://douchanchan.app/analysis-tasks). If the user specifically requested MCP, explain the connection step instead of switching routes. MCP does not read the browser extension's creator-post cache.
 
-Connect `https://douchanchan.toolspace.xyz/mcp` through the client's OAuth flow. The client needs remote HTTP and MCP `2026-07-28` support; no API key or extension is needed.
+Connect `https://douchanchan.app/mcp` through the client's OAuth flow. The client needs remote HTTP and MCP `2026-07-28` support; no API key or extension is needed.
 
 | Tool | Authorization and use |
 | --- | --- |
