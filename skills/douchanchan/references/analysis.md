@@ -1,11 +1,11 @@
 # Analysis and reports
 
-Open [analysis tasks](https://douchanchan.app/analysis-tasks). Sign in through the avatar menu.
+For available MCP video submission, task reads, cancellation or feedback, use [MCP workflows](mcp.md). For website workflows below, open [analysis tasks](https://douchanchan.app/analysis-tasks) and sign in through the avatar menu.
 
 ## Submit analysis
 
 - **Platform post:** use the extension's analysis action on that post.
-- **Local video:** use **New analysis** on the website; no extension is needed.
+- **Local video:** prefer connected MCP when video submission tools and compatible local file preparation/upload are available. Otherwise use **New analysis** on the website, respecting the user's chosen route; no extension is needed.
 
 Select the material, enter the user's requirements, and wait for the quote. Confirm only within the approved cost, then upload and retain the task ID. Track its status on the website; submission does not mean the report is ready.
 
@@ -27,4 +27,4 @@ Choose the requested format and available attribution options, then download and
 
 Reports start private. For an authorized share, open **Share report**, switch to **Public**, and copy the link. Anonymous shared reports are read-only.
 
-Use the website's task/report controls for feedback, cancellation, or deletion.
+Use exposed MCP tools or the website's controls for cancellation and report feedback, following the user's chosen route. Deletion remains a website action. Only unstarted tasks can be cancelled; report feedback records the user's actual decisions and results without generating another report or charging coins.

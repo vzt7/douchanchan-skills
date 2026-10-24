@@ -5,9 +5,10 @@ Help agents choose the right Douchanchan capability and interpret its results ac
 ## Writing
 
 - Keep only guidance that improves source selection, execution or interpretation; document supported behavior rather than guessed capabilities.
-- Keep routing and compatibility in `SKILL.md`; load `references/browser.md` only for setup or recovery. Group task references by workflow: posts/data, media, analysis and MCP account reads.
+- Keep routing and compatibility in `SKILL.md`; load `references/browser.md` only for setup or recovery. Group task references by workflow: posts/data, media, analysis and MCP operations.
 - Keep `README.md` in Simplified Chinese and `README.en.md` equivalent. Skill instructions use English; responses follow the user's language.
 - Keep references focused on product decisions and actions; avoid internal implementation details and separate files for short shared notes.
+- Check the actual deployed tool list and scopes before claiming production availability. Separate staging validation from production release; a skill update neither deploys tools nor expands an OAuth grant. Keep the README tool list, scope mapping and logo asset aligned in both languages.
 
 ## Versions
 

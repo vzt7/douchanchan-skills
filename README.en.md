@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/vzt7/douchanchan-skills"><img src="https://github.com/user-attachments/assets/2c1a7511-123d-470b-a288-18656fd93ca1" alt="Douchanchan" width="96" height="96"></a>
+  <a href="https://github.com/vzt7/douchanchan-skills"><img src="assets/douchanchan-logo.png" alt="Douchanchan" width="96"></a>
 </p>
 
 <h3 align="center">Douchanchan Skills</h3>
@@ -20,6 +20,7 @@
 | Media | Trim video clips and record live streams | Trim seconds 10–25 of this video. Preview the selection before exporting. |
 | Content analysis | Submit platform posts or local videos after confirming the quote | Analyze this local video. Show the quote and wait for my approval before submitting. |
 | Reports | Track tasks and summarize findings, evidence, and limitations | Review recently completed analysis tasks and summarize report findings and evidence. |
+| Tasks and feedback | Cancel an unstarted analysis and record adoption decisions and real validation results | Cancel the analysis I just submitted; record the recommendations I actually adopted and my validation results. |
 | Workflow automation | Combine post collection, filtering, statistics, and summaries | Collect the past week's posts from these creators, rank them by engagement, and produce a comparison. |
 | Scheduled checks | Use an agent or scheduling tool to run recurring reads and summaries | Every day at 9 AM, check these creators for new posts and summarize them. |
 
@@ -49,32 +50,49 @@ npx skills add vzt7/douchanchan-skills --skill douchanchan -g
 
 Requires a client supporting remote HTTP, OAuth, and MCP protocol `2026-07-28`.
 
-Add this remote server in your client, then sign in and approve read-only access. No API key is needed:
+Add this remote server in your client, then sign in and authorize the capabilities you need. No API key is needed:
 
 ```text
 https://douchanchan.app/mcp
 ```
 
-| Tool | Purpose | Required plan |
+**Availability (checked 2026-10-24):** Production currently exposes 4 tools: balance, task list, task status and report reads. The complete 13-tool version has passed staging acceptance; video submission, cancellation and feedback have not yet been released to production. The table below covers the complete capability set. Agents must use tools actually discovered on the connected server; updating the skill does not release new production tools.
+
+| Tool | Purpose | Scope |
 | --- | --- | --- |
-| `get_coin_balance` | Read the coin balance and check time | Standard / Max |
-| `list_analysis_tasks` | Browse tasks with pagination | Max |
-| `get_analysis_task` | Check task status and progress | Max |
-| `get_analysis_report` | Read a report or selected chapters | Max |
+| `get_coin_balance` | Read the coin balance and check time | `coins:read` |
+| `list_analysis_tasks` | Browse tasks with pagination | `analysis:read` |
+| `get_analysis_task` | Check task status and progress | `analysis:read` |
+| `get_analysis_report` | Read a report or selected chapters | `analysis:read` |
+| `get_video_analysis_config` | Read video submission requirements | `analysis:submit` |
+| `prepare_video_analysis` | Prepare a video analysis and get its quote | `analysis:submit` |
+| `confirm_video_analysis` | Confirm the quote and submit the analysis | `analysis:submit` |
+| `resume_video_analysis_upload` | Resume the original upload without another coin freeze | `analysis:submit` |
+| `complete_video_analysis_upload` | Complete upload and check queue admission | `analysis:submit` |
+| `cancel_analysis_task` | Cancel a task before processing starts | `analysis:manage` |
+| `get_analysis_feedback` | Read report adoption and validation feedback | `analysis:read` |
+| `save_analysis_adoption` | Save a recommendation's adoption status | `analysis:manage` |
+| `save_analysis_observation` | Save or clear a real validation observation | `analysis:manage` |
 
-When no scope is specified, authorization defaults to `coins:read`. Tasks and reports require `analysis:read`; you can also authorize both together. A balance is a snapshot, not a quote or spending approval.
+Balance reads do not require Max; all other analysis tools require active Max. Omitted scope defaults to `coins:read`. Submission through report reading needs `analysis:submit` + `analysis:read`; reading before cancellation or feedback saves needs `analysis:read` + `analysis:manage`. Additional scopes require fresh consent; an existing grant or token refresh does not expand access. A balance is a snapshot, not a quote or spending approval.
 
-MCP does not read creator-post lists from the browser. Uploads, payment confirmation, exports, and sharing stay in the product interface.
+The video flow is: read configuration → prepare the actual file and quote → user approves the amount → upload bytes → check queue admission → read task progress and report. The client needs compatible file preparation, fingerprint calculation and upload support. This skill does not bundle a file bridge; an MCP-only chat client cannot upload a local path or attachment URI. Use the website's **New analysis** flow when file support is unavailable. See the [MCP guide](skills/douchanchan/references/mcp.md) for recovery, cancellation and feedback.
+
+Only unstarted tasks can be cancelled; report the amount actually released by the server. Feedback records the user's real decisions and observations without model calls, coin charges or changes to the generated report. Resolve conflicts with the user before saving again.
+
+Creator-post lists, downloads, clipping and live recording use the extension. Payments, report file exports, sharing and deletion use the website. Creator profiles are not an MCP capability.
 
 ## 🛠️ Troubleshooting
 
 | Issue | Action |
 | --- | --- |
 | The agent cannot find the extension | Check that the extension is installed in the browser profile it controls |
-| MCP tools are missing | Check client compatibility and complete OAuth authorization |
-| MCP reports insufficient scope | Reconnect and authorize the required data access |
+| MCP tools are missing | Check client compatibility, OAuth connection and the server's release scope; do not switch environments to obtain missing tools |
+| MCP reports insufficient scope | Reconnect and authorize the required read, submission or management scope |
 | Analysis MCP reports missing membership | Confirm that your Max membership is active |
 | A service is unavailable or rate-limited | Keep the task and connection, follow the retry delay, and avoid duplicate submissions |
+| Upload is interrupted after quote confirmation | Keep the original task and file, then resume; do not create a second paid task |
+| Feedback save conflicts | Read the current record and agree what to keep before saving again; do not overwrite automatically |
 | A downloaded file is missing | Check browser downloads or the destination; starting a download does not prove it finished |
 
 ## 🔄 Update or remove
