@@ -56,7 +56,7 @@ Add this remote server in your client, then sign in and authorize the capabiliti
 https://douchanchan.app/mcp
 ```
 
-**Availability (checked 2026-10-24):** Production currently exposes 4 tools: balance, task list, task status and report reads. The complete 13-tool version has passed staging acceptance; video submission, cancellation and feedback have not yet been released to production. The table below covers the complete capability set. Agents must use tools actually discovered on the connected server; updating the skill does not release new production tools.
+**Availability (2026-10-24):** Production now exposes all 13 tools below, including video submission, report reads, cancellation and report feedback. Agents must use tools actually discovered on the connected server; additional scopes require fresh consent.
 
 | Tool | Purpose | Scope |
 | --- | --- | --- |
