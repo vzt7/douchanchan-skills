@@ -36,7 +36,7 @@ Send this prompt to an agent that supports Skills, can access GitHub, and can wr
 Install only https://github.com/vzt7/douchanchan-skills/tree/main/skills/douchanchan in the user-level skills directory using an existing native installer or a complete directory copy (include SKILL.md and references/). Do not use npx or install runtimes. Update same-source installs if needed; ask before overwriting local edits or other/unknown-source installs, or if the destination is unclear. Verify files and local references; report the path, skill version and reload/new-session requirements.
 ```
 
-Alternatively, [download the repository ZIP](https://github.com/vzt7/douchanchan-skills/archive/refs/heads/main.zip) and place the complete `skills/douchanchan` folder in a Skills directory supported by your agent. Do not copy only `SKILL.md`.
+**Update:** Send the prompt above again to update the Skill from the same source.
 
 ### Command-line installation
 
@@ -45,6 +45,33 @@ If Node.js and npm are already available:
 ```bash
 npx skills add vzt7/douchanchan-skills --skill douchanchan -g
 ```
+
+**Update:**
+
+```bash
+npx skills update douchanchan -g
+```
+
+**Remove:**
+
+```bash
+npx skills remove douchanchan -g
+```
+
+### Install from a ZIP (no Node.js)
+
+[Download the repository ZIP](https://github.com/vzt7/douchanchan-skills/archive/refs/heads/main.zip) and place the complete `skills/douchanchan` folder in a Skills directory supported by your agent. Do not copy only `SKILL.md`.
+
+**Update:** Download the latest ZIP, review and preserve local edits in the original folder, then update the original `skills/douchanchan` folder.
+
+### Browser extension: install, update, and remove
+
+The browser extension is separate from the Skill. Install it in the browser profile your agent controls:
+
+- [Chrome Web Store](https://chrome.google.com/webstore/detail/jlknbjboeobdnibieepdfbnlppgegilj)
+- [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/ljlebognoljmahakfgkmbciigfmhjbde)
+
+Update it through the appropriate store and remove it from the browser's extension manager.
 
 ## 🔌 Connect MCP (optional)
 
@@ -94,12 +121,3 @@ Creator-post lists, downloads, clipping and live recording use the extension. Pa
 | Upload is interrupted after quote confirmation | Keep the original task and file, then resume; do not create a second paid task |
 | Feedback save conflicts | Read the current record and agree what to keep before saving again; do not overwrite automatically |
 | A downloaded file is missing | Check browser downloads or the destination; starting a download does not prove it finished |
-
-## 🔄 Update or remove
-
-To update the skill, send the installation prompt above again, preserving local edits. Update the extension through its store. To remove the skill, use the original installer or remove only its skill directory. CLI installations also support:
-
-```bash
-npx skills update douchanchan -g
-npx skills remove douchanchan -g
-```
