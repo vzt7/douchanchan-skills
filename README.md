@@ -36,7 +36,7 @@
 Install only https://github.com/vzt7/douchanchan-skills/tree/main/skills/douchanchan in the user-level skills directory using an existing native installer or a complete directory copy (include SKILL.md and references/). Do not use npx or install runtimes. Update same-source installs if needed; ask before overwriting local edits or other/unknown-source installs, or if the destination is unclear. Verify files and local references; report the path, skill version and reload/new-session requirements.
 ```
 
-也可[下载仓库 ZIP](https://github.com/vzt7/douchanchan-skills/archive/refs/heads/main.zip)，将其中完整的 `skills/douchanchan` 文件夹放入所用 Agent 支持的 Skills 目录；不要只复制 `SKILL.md`。
+**更新：** 重新发送上面的提示词可更新同来源的 Skill。
 
 ### 命令行安装
 
@@ -45,6 +45,33 @@ Install only https://github.com/vzt7/douchanchan-skills/tree/main/skills/douchan
 ```bash
 npx skills add vzt7/douchanchan-skills --skill douchanchan -g
 ```
+
+**更新：**
+
+```bash
+npx skills update douchanchan -g
+```
+
+**卸载：**
+
+```bash
+npx skills remove douchanchan -g
+```
+
+### 下载 ZIP 安装（无需 Node.js）
+
+[下载仓库 ZIP](https://github.com/vzt7/douchanchan-skills/archive/refs/heads/main.zip)，将其中完整的 `skills/douchanchan` 文件夹放入所用 Agent 支持的 Skills 目录；不要只复制 `SKILL.md`。
+
+**更新：** 下载最新 ZIP，检查并保留原目录中的本地修改，再更新原来的 `skills/douchanchan` 文件夹。
+
+### 浏览器扩展：安装、更新与卸载
+
+浏览器扩展与 Skill 分开安装，请在 Agent 实际控制的浏览器配置文件中安装：
+
+- [Chrome 网上应用店](https://chrome.google.com/webstore/detail/jlknbjboeobdnibieepdfbnlppgegilj)
+- [Microsoft Edge 加载项](https://microsoftedge.microsoft.com/addons/detail/ljlebognoljmahakfgkmbciigfmhjbde)
+
+安装后通过对应商店更新，在浏览器扩展管理页卸载。
 
 ## 🔌 MCP 接入（可选）
 
@@ -94,12 +121,3 @@ https://douchanchan.app/mcp
 | 视频已确认但上传中断 | 保留原任务和文件，恢复上传；不要新建第二个付费任务 |
 | 反馈保存冲突 | 读取当前记录，确认要保留的内容后再保存，不能自动覆盖 |
 | 下载后未找到文件 | 检查浏览器下载记录或目标目录；触发下载不等于保存完成 |
-
-## 🔄 更新与卸载
-
-更新 Skill 可再次发送上面的安装提示词，保留本地修改；扩展通过对应商店更新。卸载时使用原安装工具，或仅移除对应 Skill 目录。CLI 安装的版本也可使用：
-
-```bash
-npx skills update douchanchan -g
-npx skills remove douchanchan -g
-```
