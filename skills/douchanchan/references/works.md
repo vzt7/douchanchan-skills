@@ -25,5 +25,6 @@ Deliver the requested data with a concise source/profile link, relevant time ran
 - **Single post:** use its download menu or expanded details to select the requested video quality, audio or image assets.
 - **Multiple posts:** use Batch download with the intended selection and output settings. Directory output needs folder permission; ZIP output must finish archive generation. Verify saved files where tools permit and distinguish browser handoff from completed writes. Check partial output before retrying.
 - **Post CSV (Max):** after sign-in and entitlement validation, open More actions > Data export, select posts and at least one available field group, then Export CSV. Confirm the output. If the entry is absent, check sign-in, Max and validation status; do not bypass export access by extracting internal caches.
+- **Content insights report (Max):** inside an opened **Content insights** report, use **Export Markdown report** or **Export analysis JSON** for that scope when requested.
 
 Post CSV contains metadata and metrics, not media files or analysis reports.

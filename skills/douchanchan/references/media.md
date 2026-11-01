@@ -10,6 +10,7 @@
 
 1. Enter the actual live room, confirm the broadcaster, and wait for the extension's recording panel to be ready. Directory previews and floating players outside the room are not recording targets.
 2. Set the output directory and intended duration or stopping condition.
-3. Start recording, monitor the panel, then stop and check the saved segments.
+3. Start recording and monitor the panel. Recording attempts to resume a paused live player, so stop recording before deliberately pausing playback; before refreshing, leaving the room, or closing the tab, stop recording and wait for saving to finish.
+4. Check the saved segments. When offered, use **Merge into one file** to combine valid segments without deleting originals; changes to video size, codec, or audio produce separate merged outputs, and isolated transition segments remain separate for review.
 
 Standard allows up to 15 minutes per recording; Max removes that limit. Agree on a supported duration before starting. After an interruption, inspect saved segments and recovery options before restarting.
