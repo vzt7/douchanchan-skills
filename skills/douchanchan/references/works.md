@@ -16,7 +16,7 @@ Read loading progress from the source-info button by hovering or keyboard focus;
 
 Use available filters and sorting as needed. Date filters apply to loaded works; an older item does not prove the requested period is complete, especially under a non-chronological sort. Stop when coverage is established, the list ends, or loading no longer progresses. A truncated cache remains a partial sample even if the source reached its last page.
 
-Use basic statistics or Data insights (Max) as requested. Keep missing metrics distinct from zero and retain displayed units and precision; rounded chart labels are not exact counts. Do not invent audience, revenue or other unavailable fields.
+Use **Basic statistics**, **Basic analysis**, or **Content insights** (Max) as requested. Keep missing metrics distinct from zero and retain displayed units and precision; rounded chart labels are not exact counts. Do not invent audience, revenue or other unavailable fields.
 
 Deliver the requested data with a concise source/profile link, relevant time range, read time, sample count and coverage limitation. Reading visible basic data does not itself require Max. Follow the user's requested format; a data question does not automatically need a CSV export.
 

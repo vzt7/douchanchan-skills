@@ -68,7 +68,7 @@ npx skills remove douchanchan -g
 
 The browser extension is separate from the Skill. Install it in the browser profile your agent controls:
 
-- [Chrome Web Store](https://chrome.google.com/webstore/detail/jlknbjboeobdnibieepdfbnlppgegilj)
+- [Chrome Web Store](https://chromewebstore.google.com/detail/jlknbjboeobdnibieepdfbnlppgegilj)
 - [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/ljlebognoljmahakfgkmbciigfmhjbde)
 
 Update it through the appropriate store and remove it from the browser's extension manager.

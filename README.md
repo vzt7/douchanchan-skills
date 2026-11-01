@@ -68,7 +68,7 @@ npx skills remove douchanchan -g
 
 浏览器扩展与 Skill 分开安装，请在 Agent 实际控制的浏览器配置文件中安装：
 
-- [Chrome 网上应用店](https://chrome.google.com/webstore/detail/jlknbjboeobdnibieepdfbnlppgegilj)
+- [Chrome 网上应用店](https://chromewebstore.google.com/detail/jlknbjboeobdnibieepdfbnlppgegilj)
 - [Microsoft Edge 加载项](https://microsoftedge.microsoft.com/addons/detail/ljlebognoljmahakfgkmbciigfmhjbde)
 
 安装后通过对应商店更新，在浏览器扩展管理页卸载。
