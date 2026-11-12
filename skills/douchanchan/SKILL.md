@@ -29,6 +29,6 @@ For extension workflows, read [browser setup and recovery](references/browser.md
 
 ## Compatibility
 
-The skill and browser extension have separate versions. Extension workflows support **Douchanchan 1.9.x**. Website-only and MCP workflows do not require the extension and are not subject to this version requirement.
+The skill and browser extension have separate versions. Extension workflows require **Douchanchan >=1.9.0** (compatible version: **1.9.x**). An observed extension version newer than `1.9.x` indicates that an updated skill may be available; when appropriate (such as during setup, recovery, or when encountering unexpected UI behavior), remind the user to update [douchanchan-skills](https://github.com/vzt7/douchanchan-skills). Website-only and MCP workflows do not require the extension and are not subject to this version requirement.
 
 MCP capabilities depend on the connected server's deployment and exposed schemas. A skill update does not deploy new server tools or expand an existing OAuth grant. Discover available tools before choosing a workflow; never switch accounts or environments to obtain a missing capability.
